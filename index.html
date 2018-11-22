@@ -4,23 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Champion-fx Style Guide</title>
+    <title>Binary Style Guide</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <script src="binary.js"></script>
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
-    <script src="style.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="index_files/style.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://style.binary.com/images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://style.binary.com/images/favicons/favicon-32x32.png">
+    <link rel="stylesheet" href="index_files/style.css">
     <link rel="stylesheet" href="binary.css">
+    <link rel="stylesheet" href="binary.more.css">
+
+    <script src="binary.js"></script>
+    <script src="binary.more.js"></script>
 </head>
 
 <body>
-    <div id="topbar" class="primary-color-dark"></div>
-    <div id="header" class="primary-color">
+    <div id="topbar" class="primary-bg-color-dark"></div>
+    <div id="header" class="dark-blue">
         <div class="container">
             <div class="logo-wrapper">
-                <a href="https://www.champion-fx.com" class="logo-parent">
+                <a href="https://binary.com" class="logo-parent">
                     <div class="logo">
                         <div></div>
                     </div>
@@ -45,27 +48,65 @@
                     <li><a href="#text-section">Text</a></li>
                     <li><a href="#button-section">Link and Buttons</a></li>
                     <li><a href="#message-section">Messages</a></li>
+                    <li><a href="#control-section">Controls</a></li>
                     <li><a href="#spinner-section">Spinner</a></li>
                     <li><a href="#table-section">Table</a></li>
                     <li><a href="#sidebar-section">Sidebar Menu</a></li>
                     <li><a href="#form-section">Form</a></li>
-                    <li><a href="#accordion-section">Accordion</a></li>
-                    <li><a href="#tabs-section">Tabs</a></li>
                     <li><a href="#icon-section">Icons</a></li>
-                    <li><a href="#picker-section">Date and Time Pickers</a></li>
+                    <li><a href="#symbols-section">Symbols</a></li>
+                    <li><a href="#accordion-section">Accordion *</a></li>
+                    <li><a href="#tabs-section">Tabs *</a></li>
+                    <li><a href="#picker-section">Date and Time Pickers *</a></li>
                 </ul>
 
             </div>
             <div class="page-content">
                 <div class="f-row introduction-section">
                     <div class="f-item">
-                        <h1>Champion-fx Style Guide</h1>
-                        <p>The goal of the project is to serve as base style for all Champion-fx projects, and to ensure consistency and maintainability of the brand presentation.</p>
+                        <h1>Binary Style</h1>
+                        <p>The goal of the project is to serve as base style for all Binary projects, and to ensure consistency and maintainability of the brand presentation.</p>
                         <h2>Usage</h2>
                         <ul class="bullet">
-                          <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) in your project</li>
-                          <li>Include the <a href="binary.js" target="_blank">JS file</a> in your project</li>
-                          <li>Include the styles by including <a href="binary.css" target="_blank">this file</a> in your project</li>
+                            <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) in your project</li>
+                            <li>Include these files in your project:<br/>
+<pre class="prettyprint">
+    <code>&lt;link href="https://style.binary.com/binary.css" rel="stylesheet" /&gt;
+    &lt;script src="https://style.binary.com/binary.js"&gt;&lt;/script&gt;</code>
+</pre>
+                            </li>
+                            <li>If you need Date and Time Pickers, Tabs or Accordion include the following files in your project, this will include a copy of jquery-ui@v1.12.1 and customized styles.<br/>
+<pre class="prettyprint">
+    <code>&lt;link href="https://style.binary.com/binary.more.css" rel="stylesheet" /&gt;
+    &lt;script src="https://style.binary.com/binary.more.js"&gt;&lt;/script&gt;</code>
+</pre>
+                            </li>
+                        </ul>
+                        <h2>NPM Usage</h2>
+                        <ul class="bullet">
+                            <li>Install jQuery:<br/>
+<pre class="prettyprint">
+    <code>npm install --save jquery</code>
+</pre>
+                            </li>
+                            <li>The library is available on npm:<br/>
+<pre class="prettyprint">
+    <code>npm install --save binary-style</code>
+</pre>
+                            </li>
+                            <li>Import these files in your project:<br/>
+<pre class="prettyprint">
+    <code>import 'jquery';
+    import 'binary-style';
+    import 'binary-style/binary.css';</code>
+</pre>
+                            </li>
+                            <li>If you need Date and Time Pickers, Tabs or Accordion import the following files as well, this will include a copy of jquery-ui@v1.12.1 and customized styles.<br/>
+<pre class="prettyprint">
+    <code>import 'binary-style/binary.more';
+    import 'binary-style/binary.more.css';</code>
+</pre>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -76,7 +117,7 @@
                     </div>
                 </div>
                 <div class="f-row header-section">
-                    <div class="topbar primary-color-dark" style="height:25px;margin-left:20px;">
+                    <div class="topbar primary-bg-color-dark" style="height:25px;margin-left:20px;">
                         <div class="languages">
                             <ul id="display_language">
                                 <li class="EN">
@@ -123,16 +164,16 @@
                           </a>
                         </div>
                         <ul class="top-nav-menu mobile-hide">
-                          <li>
-                            <a href="javascript:;" class="nav-dropdown-toggle">Menu One <span class="nav-caret"></span></a>
+                          <li class="nav-dropdown-toggle">
+                            <a href="javascript:;">Menu One <span class="nav-caret"></span></a>
                             <ul>
                               <li>
                                 <a href="javascript:;" class="disabled">Disabled Menu Item</a>
                               </li>
                             </ul>
                           </li>
-                          <li>
-                            <a href="javascript:;" class="nav-dropdown-toggle">Menu Two <span class="nav-caret"></span></a>
+                          <li class="nav-dropdown-toggle">
+                            <a href="javascript:;">Menu Two <span class="nav-caret"></span></a>
                             <ul>
                               <li>
                                 <a href="javascript:;">Menu Item<span class="nav-submenu-caret"></span></a>
@@ -209,7 +250,7 @@
                         <div class="code-sample">
                             <pre class="prettyprint">
                     <code>
-  &lt;div class=&quot;topbar primary-color-dark&quot;&gt;
+  &lt;div class=&quot;topbar primary-bg-color-dark&quot;&gt;
     &lt;div class=&quot;languages&quot;&gt;
       &lt;ul id=&quot;display_language&quot;&gt;
         &lt;li class=&quot;EN&quot;&gt;
@@ -242,7 +283,7 @@
   &lt;div class=&quot;dark-blue header&quot;&gt;
     &lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;logo-wrapper&quot;&gt;
-    &lt;a href=&quot;https://champion-fx.com&quot; class=&quot;logo-parent&quot;&gt;
+    &lt;a href=&quot;https://binary.com&quot; class=&quot;logo-parent&quot;&gt;
       &lt;div class=&quot;logo&quot;&gt;
         &lt;div&gt;&alt;/div&gt;
       &lt;/div&gt;
@@ -252,8 +293,8 @@
     &lt;/a&gt;
     &lt;/div&gt;
     &lt;ul class=&quot;top-nav-menu mobile-hide&quot;&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:;&quot; class=&quot;nav-dropdown-toggle&quot;&gt;
+    &lt;li class=&quot;nav-dropdown-toggle&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
         Menu One
         &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
       &lt;/a&gt;
@@ -265,8 +306,8 @@
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:;&quot; class=&quot;nav-dropdown-toggle&quot;&gt;
+    &lt;li class=&quot;nav-dropdown-toggle&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
         Menu Two
         &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
       &lt;/a&gt;
@@ -366,8 +407,8 @@
                 <div class="f-row logo-section">
                     <div class="f-item">
                         <h3>Logo (separate)</h3>
-                        <div class="logo-wrapper primary-color">
-                            <a class="logo-parent" href="https://champion-fx.com">
+                        <div class="logo-wrapper primary-bg-color">
+                            <a class="logo-parent" href="https://binary.com">
                                 <div class="logo">
                                     <div></div>
                                 </div>
@@ -378,11 +419,11 @@
                         </div>
                         <div style="margin-top:10px;">
                             <h3>Logo (combined)</h3>
-                            <img style="width:210px;" src="./images/logo/cfx_logo.png" />
+                            <img style="width:210px;" src="./images/logo/binary_logo_dark.svg" />
                         </div>
                         <div style="margin-top:10px;">
                             <h3>Favicon</h3>
-                            <img style="width:18px;" src="./images/favicons/favicon-32x32.png" />
+                            <img style="width:18px;" src="./images/favicons/favicon.ico" />
                         </div>
                     </div>
                     <div class="f-item">
@@ -390,7 +431,7 @@
                             <pre class="prettyprint">
                     <code>
     Logo (separate):
-    &lt;a class=&quot;logo-parent&quot; href=&quot;https://champion-fx.com&quot;&gt;
+    &lt;a class=&quot;logo-parent&quot; href=&quot;https://binary.com&quot;&gt;
         &lt;div class=&quot;logo&quot;&gt;
             &lt;div&gt;&lt;/div&gt;
         &lt;/div&gt;
@@ -403,46 +444,46 @@
                 images/logo/binary_logo_dark.svg&quot; /&gt;
     Favicon:
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;57x57&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-57x57.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;114x114&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-114x114.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;72x72&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-72x72.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;144x144&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-144x144.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;60x60&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-60x60.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;120x120&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-120x120.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;76x76&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-76x76.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;152x152&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-152x152.png&quot;&gt;
     &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/apple-touch-icon-180x180.png&quot;&gt;
     &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;192x192&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/favicon-192x192.png&quot;&gt;
     &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;160x160&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/favicon-160x160.png&quot;&gt;
     &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;96x96&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/favicon-96x96.png&quot;&gt;
     &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/favicon-16x16.png&quot; &gt;
     &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot;
-    href=&quot;https://style.champion-fx.com/images/
+    href=&quot;https://style.binary.com/images/
                favicons/favicon-32x32.png&quot; &gt;
 
                   </code>
@@ -450,18 +491,25 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="f-row colors-section">
                     <div class="f-item">
                         <h1>Colors</h1>
                     </div>
                 </div>
                 <div class="f-row colors-section">
-                  <div class="f-item">
-              <p style="background-color:#004385;padding:10px;color:#fff;">Brand Blue<br>#004385</p>
-          </div>
-          <div class="f-item">
-              <p style="background-color:#013365;padding:10px;color:#fff;">Dark Blue<br>#013365</p>
-          </div>
+                    <div class="f-item">
+                        <p style="background-color:#15212d;padding:10px;color:#fff;">Dark Blue
+                            <br>#15212d</p>
+                    </div>
+                    <div class="f-item">
+                        <p style="background-color:#2a3052;padding:10px;color:#fff;">Brand Blue
+                            <br>#2a3052</p>
+                    </div>
+                    <div class="f-item">
+                        <p style="background-color:#e98024;padding:10px;color:#fff;">Brand Orange
+                            <br>#e98024</p>
+                    </div>
                 </div>
 
                 <div class="f-row title-section">
@@ -472,6 +520,7 @@
                 <div class="f-row title-section">
                     <div class="f-item">
                         <h1>Header 1</h1>
+                        <h1 class="dark">Header 1 Dark</h1>
                         <h2>Header 2</h2>
                         <h3>Header 3</h3>
                     </div>
@@ -644,6 +693,133 @@
                     </div>
                 </div>
 
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <h1>Controls</h1>
+                    </div>
+                </div>
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <h2>Steps</h2>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="border-bottom"></div>
+                                <div class="circle">1</div>
+                                <div style="padding: 20px 10px;">
+                                    <div class="center-text">
+                                        <img src="http://placehold.it/50x50" />
+                                    </div>
+                                    <p>sample text</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="border-bottom"></div>
+                                <div class="circle">2</div>
+                                <div style="padding: 20px 10px;">
+                                    <div class="center-text">
+                                        <img src="http://placehold.it/50x50" />
+                                    </div>
+                                    <p>sample text</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="border-bottom"></div>
+                                <div class="circle">3</div>
+                                <div style="padding: 20px 10px;">
+                                    <div class="center-text">
+                                        <img src="http://placehold.it/50x50" />
+                                    </div>
+                                    <p>sample text</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <h2>Section Dividers</h2>
+                        <div class="section-divider">
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                            <div class="faded">Section 1</div>
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                        </div>
+                        <p>Section 1 text</p>
+                        <div class="section-divider">
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                            <div class="faded">Section 2</div>
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                        </div>
+                        <p>Section 2 text</p>
+                        <div class="section-divider">
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                            <div class="circle">Or</div>
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                        </div>
+                        <p>Section 3 text</p>
+                    </div>
+                </div>
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+    &lt;div class=&quot;steps&quot;&gt;
+        &lt;div class=&quot;step&quot;&gt;
+            &lt;div class=&quot;border-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle&quot;&gt;1&lt;/div&gt;
+            &lt;div style=&quot;padding: 20px 10px;&quot;&gt;
+                &lt;div class=&quot;center-text&quot;&gt;
+                    &lt;img src=&quot;http://placehold.it/50x50&quot; /&gt;
+                &lt;/div&gt;
+                &lt;p&gt;sample text&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;step&quot;&gt;
+            &lt;div class=&quot;border-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle&quot;&gt;2&lt;/div&gt;
+            &lt;div style=&quot;padding: 20px 10px;&quot;&gt;
+                &lt;div class=&quot;center-text&quot;&gt;
+                    &lt;img src=&quot;http://placehold.it/50x50&quot; /&gt;
+                &lt;/div&gt;
+                &lt;p&gt;sample text&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;step&quot;&gt;
+            &lt;div class=&quot;border-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle&quot;&gt;3&lt;/div&gt;
+            &lt;div style=&quot;padding: 20px 10px;&quot;&gt;
+                &lt;div class=&quot;center-text&quot;&gt;
+                    &lt;img src=&quot;http://placehold.it/50x50&quot; /&gt;
+                &lt;/div&gt;
+                &lt;p&gt;sample text&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-divider&quot;&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;faded&quot;&gt;Section 1&lt;/div&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Section 1 text&lt;/p&gt;
+    &lt;div class=&quot;section-divider&quot;&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;faded&quot;&gt;Section 2&lt;/div&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Section 2 text&lt;/p&gt;
+    &lt;div class=&quot;section-divider&quot;&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle&quot;&gt;Or&lt;/div&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Section 3 text&lt;/p&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="f-row spinner-section">
                     <div class="f-item">
                         <h1>Spinner</h1>
@@ -660,7 +836,7 @@
                             <div class="rect5"></div>
                         </div>
                         <p>use over a dark background:</p>
-                        <div class="primary-color" style="padding: 20px;">
+                        <div class="primary-bg-color" style="padding: 20px;">
                             <div class="barspinner white">
                                 <div class="rect1"></div>
                                 <div class="rect2"></div>
@@ -695,6 +871,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="f-row table-section">
                     <div class="f-item">
                         <h1>Table</h1>
@@ -787,6 +964,60 @@
                                 });
                             </script>
                         </div>
+                        <div>
+                            <div class="sidebar-collapsible">
+                                <ul>
+                                    <li>
+                                        <a href="#">Section 1</a>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Section 2 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 4</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Section 3 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Section 4</a>
+                                    </li>
+                                     <li class="has-submenu">
+                                        <a href="#">Section 5 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="f-item">
                         <div class="code-sample">
@@ -809,6 +1040,41 @@
       $(this).parent().addClass('selected');
     });
   &lt;/script&gt;
+
+  &lt;div class="sidebar-collapsible"&gt;
+      &lt;ul&gt;
+          &lt;li&gt;
+              &lt;a href="#"&gt;Section 1&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 2 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 3&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 4&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 3 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;a href="#"&gt;Section 4&lt;/a&gt;
+          &lt;/li&gt;
+              &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 5 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 3&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/div&gt;
                             </code>
                           </pre>
                         </div>
@@ -822,12 +1088,35 @@
                 </div>
                 <div class="f-row form-section">
                     <div class="f-item">
-                        <div style="margin-top:20px;">
-                            <select>
-                                <option value="" selected="selected">Option 1</option>
-                                <option value="">Option 2</option>
-                                <option value="">Option 3</option>
+                        <div style="margin-top:18px;width:110px;">
+                            <select id="dropdown">
+                                <option value="option1" selected>Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3" disabled>Option 3</option>
                             </select>
+                            <script type="text/javascript">
+                                selectDropdown('#dropdown');
+                            </script>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input id="checkbox1" type="checkbox" value="option1" />
+                            <label for="checkbox1">Option 1</label>
+                            <br/>
+                            <input id="checkbox2" type="checkbox" value="option2" />
+                            <label for="checkbox2">Option 2</label>
+                            <br/>
+                            <input id="checkbox3" type="checkbox" value="option3" />
+                            <label for="checkbox3">Option 3</label>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input id="radio1" type="radio" value="option1" name="radio" />
+                            <label for="radio1">Option 1</label>
+                            <br/>
+                            <input id="radio2" type="radio" value="option2" name="radio" />
+                            <label for="radio2">Option 2</label>
+                            <br/>
+                            <input id="radio3" type="radio" value="option3" name="radio" />
+                            <label for="radio3">Option 3</label>
                         </div>
                         <div style="margin-top:20px;">
                             <input type='text'/>
@@ -841,14 +1130,34 @@
                         <div class="code-sample">
                             <pre class="prettyprint">
                         <code>
-  &lt;select&gt;
-    &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Option 1&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-     &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+  &lt;select id=&quot;dropdown&quot;&gt
+    &lt;option value=&quot;option1&quot; selected&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;option3&quot; disabled&gt;Option 3&lt;/option&gt;
   &lt;/select&gt;
+  &lt;script type=&quot;&gt;text/javascript&quot;&gt;&gt;
+      selectDropdown('#dropdown');
+  &lt;/script&gt;
 
-  &lt;input type='text'/&gt;
-  &lt;p class='hint'&gt;Hint comes here&lt;/p&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option1&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 1&lt;/label&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option2&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 2&lt;/label&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option3&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 3&lt;/label&gt;
+
+  &lt;input id=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;option1&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio1&quot;>Option 1&lt;/label&gt;
+  &lt;input id=&quot;radio2&quot; type=&quot;radio&quot; value=&quot;option2&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio2&quot;>Option 2&lt;/label&gt;
+  &lt;input id=&quot;radio3&quot; type=&quot;radio&quot; value=&quot;option3&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio3&quot;>Option 3&lt;/label&gt;
+
+  &lt;input type=&quot;text&quot;/&gt;
+  &lt;p class=&quot;hint&quot;&gt;Hint comes here&lt;/p&gt;
+
+  &lt;input type=&quot;text&quot;/&gt;
+  &lt;p class=&quot;hint&quot;&gt;Hint comes here&lt;/p&gt;
 
   &lt;textarea name=&quot;name&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
                       </code>
@@ -901,6 +1210,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="f-row tabs-section">
                     <div class="f-item">
                         <h1>Tabs</h1>
@@ -1031,6 +1341,7 @@
                         <h1>Icons</h1>
                     </div>
                 </div>
+
                 <div class="f-row icon-section">
                     <div class="f-item" style="max-width: 550px; margin-top:18px;">
                         <div class="f-row icon-section">
@@ -1173,6 +1484,48 @@
   &lt;/div&gt;
                       </code>
                     </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row symbols-section">
+                    <div class="f-item">
+                        <h1>Symbols</h1>
+                    </div>
+                </div>
+                <div class="f-row symbols-section">
+                    <div class="f-item">
+                        <p><span class="symbols aud"></span>12,345.00</p>
+                        <p><span class="symbols eur"></span>12,345.00</p>
+                        <p><span class="symbols gbp"></span>12,345.00</p>
+                        <p><span class="symbols jpy"></span>12,345</p>
+                        <p><span class="symbols usd"></span>12,345.00</p>
+                        <p><span class="symbols btc"></span>0.005</p>
+                        <p><span class="symbols bch"></span>0.005</p>
+                        <p><span class="symbols eth"></span>0.005</p>
+                        <p><span class="symbols etc"></span>0.005</p>
+                        <p><span class="symbols ltc"></span>0.005</p>
+                        <p><span class="symbols dai"></span>0.005</p>
+                        <p><span class="symbols ust"></span>0.005</p>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                                <code>
+    &lt;span class=&quot;symbols aud&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols eud&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols gbp&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols jpy&quot;&gt;&lt;/span&gt;12,345
+    &lt;span class=&quot;symbols usd&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols btc&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols bch&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols eth&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols etc&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols ltc&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols dai&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols ust&quot;&gt;&lt;/span&gt;0.005
+                                </code>
+                            </pre>
                         </div>
                     </div>
                 </div>
